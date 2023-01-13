@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <!-- CSS -->
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> 
+
+  <!-- import isotope -->
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <div class="topnav" id="myTopnav" class="filters">
+    <a href="#">Logo</a>
+    <div class="dropdown">
+        <button class="dropbtn">Menu
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="filter option-set exclusive dropdown-content" data-filter-group="menu">
+            <a href="#" data-filter-value="" class="selected">Show All</a>
+            <a href="#" data-filter-value=".monday">Monday</a>
+            <a href="#" data-filter-value=".sunday">Sunday</a>
+            <a href="#" data-filter-value=".dinner">Dinner</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Courses
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="filter option-set exclusive dropdown-content" data-filter-group="courses">
+            <a href="#" data-filter-value="" class="selected">Any</a>
+            <a href="#" data-filter-value=".starters">Starters</a>
+            <a href="#" data-filter-value=".mains">Mains</a>
+            <a href="#" data-filter-value=".sides">Sides</a>
+            <a href="#" data-filter-value=".salads">Salads</a>
+            <a href="#" data-filter-value=".desserts">Desserts</a>
+            <a href="#" data-filter-value=".drinks">Drinks</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Suitable for
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="filter option-set exclusive dropdown-content" data-filter-group="suitable">
+            <a href="#" data-filter-value="" class="selected">Everyone</a>
+            <a href="#" data-filter-value=".vegan">Vegan</a>
+            <a href="#" data-filter-value=".vegetarian">Vegetarian</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Allergie
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="filter option-set combine dropdown-content" data-filter-group="allergies">
+            <a href="#" data-filter-value=".nuts">Nuts</a>
+            <a href="#" data-filter-value=".gluten">Gluten</a>
+            <a href="#" data-filter-value=".fish">Fish</a>
+            <a href="#" data-filter-value=".milk">Milk</a>
+        </div>
+    </div>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+
+<!-- bottoni selezionati -->
+<script>
+  var filters = document.getElementsByClassName("filter");
+for (var i = 0; i < filters.length; i++) {
+  filters[i].addEventListener("click", function() {
+    this.classList.toggle("selected");
+  });
+}
+</script>
+
+
+<!-- attivazione mobilenavbar -->
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+  <br><br><br><br><br><br>
+
+
+  <div class="grid">
+    <div class="flex-container">
+      <div class="item flex-items monday starters vegan gluten">
+        <div class="card baseBlock">
+          <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="./img1.jpg"
+            data-holder-rendered="true">
+          <div class="card-body">
+            <h4 class="card-title">Fagioli</h4>
+            <p class="card-text">Dish Description</p>
+            <button class="order-button">Order</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item flex-items monday starters vegan gluten">
+        <div class="card baseBlock">
+          <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="./img2.jpg"
+            data-holder-rendered="true">
+          <div class="card-body">
+            <h4 class="card-title">Dish Title</h4>
+            <p class="card-text">Dish Description</p>
+            <button class="order-button">Order</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item flex-items dinner sides vegetarian milk">
+        <div class="card baseBlock">
+          <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="./img3.jpg"
+            data-holder-rendered="true">
+          <div class="card-body">
+            <h4 class="card-title">Dish Title</h4>
+            <p class="card-text">Dish Description</p>
+            <button class="order-button">Order</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item flex-items dinner salads vegan nuts">
+        <div class="card baseBlock">
+          <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="./img4.jpg"
+            data-holder-rendered="true">
+          <div class="card-body">
+            <h4 class="card-title">Dish Title</h4>
+            <p class="card-text">Dish Description</p>
+            <button class="order-button">Order</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item flex-items sunday desserts vegan nuts">
+        <div class="card baseBlock">
+          <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="./img5.jpg"
+            data-holder-rendered="true">
+          <div class="card-body">
+            <h4 class="card-title">Dish Title</h4>
+            <p class="card-text">Dish Description</p>
+            <button class="order-button">Order</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item flex-items dinner drinks vegetarian fish">
+        <div class="card baseBlock">
+          <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="./img6.jpg"
+            data-holder-rendered="true">
+          <div class="card-body">
+            <h4 class="card-title">Dish Title</h4>
+            <p class="card-text">Dish Description</p>
+            <button class="order-button">Order</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item flex-items monday drinks vegetarian milk">
+        <div class="card baseBlock">
+          <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="./img7.jpg"
+            data-holder-rendered="true">
+          <div class="card-body">
+            <h4 class="card-title">Dish Title</h4>
+            <p class="card-text">Dish Description</p>
+            <button class="order-button">Order</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item flex-items sunday drinks vegan milk">
+        <div class="card baseBlock">
+          <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="./img8.jpg"
+            data-holder-rendered="true">
+          <div class="card-body">
+            <h4 class="card-title">Dish Title</h4>
+            <p class="card-text">Dish Description</p>
+            <button class="order-button">Order</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item flex-items monday mains vegetarian milk">
+        <div class="card baseBlock">
+          <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="./img9.jpg"
+            data-holder-rendered="true">
+          <div class="card-body">
+            <h4 class="card-title">Dish Title</h4>
+            <p class="card-text">Dish Description</p>
+            <button class="order-button">Order</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item flex-items dinner mains vegetarian milk">
+        <div class="card baseBlock">
+          <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="./burger.jpg"
+            data-holder-rendered="true">
+          <div class="card-body">
+            <h4 class="card-title">Dish Title</h4>
+            <p class="card-text">Dish Description</p>
+            <button class="order-button">Order</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> -->
+  <script src="./js/isotope.js"></script>
+  <script src="./js/navbar.js"></script>
+</body>
+
+</html>
