@@ -72,7 +72,7 @@ body {margin:0;font-family:Arial}
   display: block;
 }
 a.selected {
-  background-color: #ddd;
+  background-color: rgb(122, 121, 121);
   color: black;
 }
 
